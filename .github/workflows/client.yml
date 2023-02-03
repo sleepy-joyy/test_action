@@ -1,4 +1,5 @@
 # .github/workflows/client.yml
+# fsf
 name: client
 on:
   push:
@@ -9,7 +10,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout source code.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Install dependencies
         run: npm install
         working-directory: ./my-agora-states-client
@@ -33,4 +34,4 @@ jobs:
             --region ap-northeast-2 \
             build s3://fe-73-sleepy-joyy-s3 \
             --delete
-        working-directory: './my-agora-states-client'
+        working-directory: ./my-agora-states-client/
